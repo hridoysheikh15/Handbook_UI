@@ -176,13 +176,13 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item open active">
                         <a href="javascript:void(0);" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bxs-graduation"></i>
                             <div data-i18n="Dashboards">Course</div>
                         </a>
                         <ul class="menu-sub">
-                            <li class="menu-item">
+                            <li class="menu-item active">
                                 <a href="./course-add.html" class="menu-link">
                                     <div data-i18n="Analytics">Add Course</div>
                                 </a>
@@ -309,7 +309,120 @@
 
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <!-- custom html start here -->
-
+                        <div class="d-flex justify-content-center pb-4">
+                            <div class="section-head">
+                                <h4 class="mb-1">Add a new Program</h4>
+                            </div>
+                        </div>
+                        <div class="card p-lg-4 p-2">
+                            <h4 class="mb-4">Section 1</h4>
+                            <div class="form">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Course Code: </label>
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="Your Course Code" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Offered Year: </label>
+                                            <select name="" id="" class="form-select">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="20">2020</option>
+                                                <option value="21">2021</option>
+                                                <option value="22">2022</option>
+                                                <option value="23">2023</option>
+                                                <option value="24">2024</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Term: </label>
+                                            <select name="" id="" class="form-select">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="1">1st</option>
+                                                <option value="2">2nd</option>
+                                                <option value="3">3rd</option>
+                                                <option value="4">4th</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Course Title: </label>
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="Your Course Code" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Course Status: </label>
+                                            <select name="" id="" class="form-select">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="1">Active</option>
+                                                <option value="0">Inactive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Course Area: </label>
+                                            <select name="" id="" class="form-select">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="d">Dhaka</option>
+                                                <option value="k">Khulna</option>
+                                                <option value="r">Rajshashi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Credit: </label>
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="Your Course Code" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Course Type: </label>
+                                            <select name="" id="" class="form-select">
+                                                <option value="" selected disabled>Please Select</option>
+                                                <option value="f">Free</option>
+                                                <option value="p">Paid</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Contact Hours: </label>
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="Your Course Code" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Pre-requisite(s): </label>
+                                            <select class="form-select" name="" id="">
+                                                <option selected>Select one</option>
+                                                <option value="">New Delhi</option>
+                                                <option value="">Istanbul</option>
+                                                <option value="">Jakarta</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Rationale: </label>
+                                    <textarea name="rationale" id="" cols="30" rows="3"></textarea>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <input type="submit" value="Done" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </div>
                         <!-- custom html end here -->
                     </div>
                     <!-- / Content -->
@@ -347,7 +460,7 @@
     <!-- build:js assets/vendor/js/core.js -->
     <!-- rich text box js -->
     <script>
-        CKEDITOR.replace('details');
+        CKEDITOR.replace('rationale');
     </script>
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
