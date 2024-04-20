@@ -34,6 +34,9 @@
     <link rel="stylesheet" href="../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
+    
+    <!-- jquery -->
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
 
     <!-- rich textbox -->
     <script src="../assets/ckeditor/ckeditor.js"></script>
@@ -311,7 +314,40 @@
 
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <!-- custom html start here -->
-                        
+                        <div class="d-flex justify-content-center pb-4">
+                            <div class="section-head">
+                                <h4 class="mb-1">Content Description</h4>
+                            </div>
+                        </div>
+                        <div class="card p-lg-4 p-2">
+                            <h4 class="mb-4">Section 3</h4>
+                            <div class="form">
+                                <ul class="list-unstyled" id="append_box">
+                                    <li id="core_field">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Course Content Description: </label>
+                                            <textarea name="outcome_details" id="" cols="30" rows="3"></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Pre-requisite(s): </label>
+                                            <select class="basic-multiple form-select" style="width: 100%;"
+                                                name="states[]" multiple="multiple" placeholder="Please Select">
+                                                <option value="b">Bangladesh</option>
+                                                <option value="d">New Delhi</option>
+                                                <option value="i">Istanbul</option>
+                                                <option value="j">Jakarta</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-sm btn-secondary" onclick="more_map_clo()">Add More</button>
+                                    <a href="./map_plo_clos.html">
+                                        <button class="btn btn-primary">Next</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <!-- custom html end here -->
                     </div>
                     <!-- / Content -->
@@ -349,9 +385,8 @@
     <!-- build:js assets/vendor/js/core.js -->
     <!-- rich text box js -->
     <script>
-        CKEDITOR.replace('details');
+        CKEDITOR.replace('outcome_details');
     </script>
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
     <script src="../assets/vendor/js/bootstrap.js"></script>
     <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>

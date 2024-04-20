@@ -192,12 +192,99 @@ function add_more_3() {
 
 }
 
+// add more button function for clo
+function more_map_clo() {
+
+  let randomNumber = String(Math.floor(Math.random() * (98765 - 12345 + 1)) + 5);
+
+  let add_element = `<div class="mb-3">
+                        <label for="" class="form-label">Course Content Description: </label>
+                        <textarea name="${randomNumber}" id="" cols="30" rows="3"></textarea>
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Pre-requisite(s): </label>
+                        <select class="basic-multiple form-select" style="width: 100%;"
+                            name="states[]" multiple="multiple" placeholder="Please Select">
+                            <option value="b">Bangladesh</option>
+                            <option value="d">New Delhi</option>
+                            <option value="i">Istanbul</option>
+                            <option value="j">Jakarta</option>
+                        </select>
+                      </div>`;
+
+  let textbox_script = `<script> CKEDITOR.replace('${randomNumber}'); </script>`;
+
+  let append_box = $("#append_box");
+
+  // $(append_box).append("<li><div class='d-flex justify-content-between'><h5>New Item</h5><button class='btn btn-sm btn-danger' onclick='remove_box(event)'>Remove</button></div>"+add_element+"</li>");
+  $(append_box).append(`<li><div class='d-flex justify-content-between'><h5>New Item</h5><button class='btn btn-sm btn-danger' onclick='remove_box(event)'>Remove</button></div>${add_element}${textbox_script}</li>`);
+
+  multi_selector();
+
+}
+
+
+function more_learn_material() {
+
+  let randomNumber = String(Math.floor(Math.random() * (98765 - 12345 + 1)) + 5);
+
+  let add_element = `<div class="mb-3">
+                        <label for="" class="form-label">Learning Material Type</label>
+                        <select class="form-select form-select-lg" name="" id="">
+                            <option selected disabled>Select one</option>
+                            <option value="b">Besic</option>
+                            <option value="s">Standard</option>
+                            <option value="p">Premium</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="" class="form-label">Reading Details: </label>
+                        <textarea name="${randomNumber}" id="" cols="30" rows="3"></textarea>
+                      </div>`;
+
+  let textbox_script = `<script> CKEDITOR.replace('${randomNumber}'); </script>`;
+
+  let append_box = $("#append_box");
+
+  $(append_box).append(`<li><div class='d-flex justify-content-between'><h5>New Item</h5><button class='btn btn-sm btn-danger' onclick='remove_box(event)'>Remove</button></div>${add_element}${textbox_script}</li>`);
+
+}
+
 
 // multiple selection js
-$(document).ready(function() {
+let multi_selector = () => {
 
-  $('.basic-multiple').select2({
-    width: 'resolve'
+  $(document).ready(function () {
+
+    $('.basic-multiple').select2({
+
+      width: 'resolve'
+
+    });
+
   });
 
+}
+
+multi_selector();
+
+
+$(document).on('change', '.file-input', function() {
+
+  var filesCount = $(this)[0].files.length;
+  
+  var textbox = $(this).prev();
+
+  if (filesCount === 1) {
+
+    var fileName = $(this).val().split('\\').pop();
+
+    textbox.text(fileName);
+
+  } else {
+
+    textbox.text(filesCount + ' files selected');
+
+  }
+  
 });

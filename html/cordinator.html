@@ -316,79 +316,27 @@
                         <!-- custom html start here -->
                         <div class="d-flex justify-content-center pb-4">
                             <div class="section-head">
-                                <h4 class="mb-1">Mapping PLOs with CLOs</h4>
+                                <h4 class="mb-1">Course Coordinator Details</h4>
                             </div>
                         </div>
                         <div class="card p-lg-4 p-2">
-                            <h4 class="mb-4">Section 4</h4>
+                            <h4 class="mb-4">Section 7</h4>
                             <div class="form">
-                                <div class="table-responsive">
-                                    <table class="table border mb-3">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col"> </th>
-                                                <th scope="col">Description</th>
-                                                <th scope="col">Mapping with PLOs</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr class="">
-                                                <td scope="row">CLO Code 1</td>
-                                                <td>Here show the description of CLO</td>
-                                                <td>
-                                                    <select class="basic-multiple form-select" style="width: 100%;"
-                                                        name="states[]" multiple="multiple" placeholder="Please Select">
-                                                        <option value="b">Bangladesh</option>
-                                                        <option value="d">New Delhi</option>
-                                                        <option value="i">Istanbul</option>
-                                                        <option value="j">Jakarta</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td scope="row">CLO Code 2</td>
-                                                <td>Here show the description of CLO</td>
-                                                <td>
-                                                    <select class="basic-multiple form-select" style="width: 100%;"
-                                                        name="states[]" multiple="multiple" placeholder="Please Select">
-                                                        <option value="b">Bangladesh</option>
-                                                        <option value="d">New Delhi</option>
-                                                        <option value="i">Istanbul</option>
-                                                        <option value="j">Jakarta</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td scope="row">CLO Code 3</td>
-                                                <td>Here show the description of CLO</td>
-                                                <td>
-                                                    <select class="basic-multiple form-select" style="width: 100%;"
-                                                        name="states[]" multiple="multiple" placeholder="Please Select">
-                                                        <option value="b">Bangladesh</option>
-                                                        <option value="d">New Delhi</option>
-                                                        <option value="i">Istanbul</option>
-                                                        <option value="j">Jakarta</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr class="">
-                                                <td scope="row">CLO Code N</td>
-                                                <td>Here show the description of CLO</td>
-                                                <td>
-                                                    <select class="basic-multiple form-select" style="width: 100%;"
-                                                        name="states[]" multiple="multiple" placeholder="Please Select">
-                                                        <option value="b">Bangladesh</option>
-                                                        <option value="d">New Delhi</option>
-                                                        <option value="i">Istanbul</option>
-                                                        <option value="j">Jakarta</option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <a href="./course-strategy.html">
+                                <ul class="list-unstyled" id="append_box">
+                                    <li id="core_field">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Name of Course Coordinator: </label>
+                                            <input type="text" class="form-control" placeholder="Code of Objective" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Short profile of Course Coordinator: </label>
+                                            <textarea name="cordinator" id="" cols="30" rows="3"></textarea>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-sm btn-secondary" onclick="add_more()">Add More</button>
+                                    <a href="./upload_file.html">
                                         <button class="btn btn-primary">Next</button>
                                     </a>
                                 </div>
@@ -431,7 +379,7 @@
     <!-- build:js assets/vendor/js/core.js -->
     <!-- rich text box js -->
     <script>
-        CKEDITOR.replace('details');
+        CKEDITOR.replace('cordinator');
     </script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
     <script src="../assets/vendor/js/bootstrap.js"></script>

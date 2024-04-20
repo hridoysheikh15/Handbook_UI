@@ -35,6 +35,9 @@
 
     <!-- Page CSS -->
 
+    <!-- jquery -->
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+
     <!-- rich textbox -->
     <script src="../assets/ckeditor/ckeditor.js"></script>
     <!-- Helpers -->
@@ -311,7 +314,39 @@
 
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <!-- custom html start here -->
-
+                        <div class="d-flex justify-content-center pb-4">
+                            <div class="section-head">
+                                <h4 class="mb-1">Learning Materials</h4>
+                            </div>
+                        </div>
+                        <div class="card p-lg-4 p-2">
+                            <h4 class="mb-4">Section 6</h4>
+                            <div class="form">
+                                <ul class="list-unstyled" id="append_box">
+                                    <li id="core_field">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Learning Material Type</label>
+                                            <select class="form-select form-select-lg" name="" id="">
+                                                <option selected disabled>Select one</option>
+                                                <option value="b">Besic</option>
+                                                <option value="s">Standard</option>
+                                                <option value="p">Premium</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Reading Details: </label>
+                                            <textarea name="outcome_details" id="" cols="30" rows="3"></textarea>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-sm btn-secondary" onclick="more_learn_material()">Add More</button>
+                                    <a href="./cordinator.html">
+                                        <button class="btn btn-primary">Next</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <!-- custom html end here -->
                     </div>
                     <!-- / Content -->
@@ -349,9 +384,8 @@
     <!-- build:js assets/vendor/js/core.js -->
     <!-- rich text box js -->
     <script>
-        CKEDITOR.replace('details');
+        CKEDITOR.replace('outcome_details');
     </script>
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
     <script src="../assets/vendor/js/bootstrap.js"></script>
     <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
