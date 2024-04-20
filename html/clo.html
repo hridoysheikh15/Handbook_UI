@@ -130,7 +130,7 @@
                         <span class="menu-header-text">Apps &amp; Pages</span>
                     </li>
                     <!-- Pages -->
-                    <li class="menu-item open active">
+                    <li class="menu-item">
                         <a href="javascript:void(0);" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-rocket"></i>
                             <div data-i18n="Dashboards">Program</div>
@@ -151,7 +151,7 @@
                                     <div data-i18n="Analytics">Graduate Attributes</div>
                                 </a>
                             </li>
-                            <li class="menu-item active">
+                            <li class="menu-item">
                                 <a href="./peos.html" class="menu-link">
                                     <div data-i18n="Analytics">Program Educational Objectives</div>
                                 </a>
@@ -313,105 +313,89 @@
                         <!-- custom html start here -->
                         <div class="d-flex justify-content-center pb-4">
                             <div class="section-head">
-                                <h4 class="mb-1">Program Educational Objectives (PEOs)</h4>
+                                <h4 class="mb-1">Course Learning Outcomes (CLOs)</h4>
                             </div>
                         </div>
-                        <!-- rich textbox -->
                         <div class="card p-lg-4 p-2">
+                            <h4 class="mb-4">Section 2</h4>
                             <div class="form">
                                 <ul class="list-unstyled" id="append_box">
                                     <li id="core_field">
                                         <div class="mb-3">
-                                            <label for="" class="form-label">PEO Code: </label>
-                                            <input type="text" class="form-control" placeholder="Code of PEO" />
+                                            <label for="" class="form-label">CLO Code: </label>
+                                            <input type="text" class="form-control" placeholder="Code of mission" />
                                         </div>
                                         <div class="mb-3">
-                                            <label for="" class="form-label">PEO Details: </label>
-                                            <textarea name="poe_details" id="" cols="30" rows="3"></textarea>
-                                        </div>
-                                        <div class="mb-3">
-                                            <p class="form-label">Domain(s):</p>
-                                            <div class="form-check form-check">
-                                                <input class="form-check-input" type="checkbox" id="" value="option1" />
-                                                <label class="form-check-label" for="">first</label>
-                                            </div>
-                                            <div class="form-check form-check">
-                                                <input class="form-check-input" type="checkbox" id="" value="option2" />
-                                                <label class="form-check-label" for="">second</label>
-                                            </div>
-                                            <div class="form-check form-check">
-                                                <input class="form-check-input" type="checkbox" id="" value="option3" />
-                                                <label class="form-check-label" for="">third</label>
-                                            </div>
+                                            <label for="" class="form-label">CLO Details: </label>
+                                            <textarea name="outcome_details" id="" cols="30" rows="3"></textarea>
                                         </div>
                                     </li>
                                 </ul>
                                 <div class="d-flex justify-content-between">
-                                    <button class="btn btn-sm btn-secondary" onclick="add_more_3()">Add More</button>
-                                    <a href="./index.html">
-                                        <button class="btn btn-primary">Save</button>
+                                    <button class="btn btn-sm btn-secondary" onclick="add_more()">Add More</button>
+                                    <a href="./map-clo.html">
+                                        <button class="btn btn-primary">Next</button>
                                     </a>
                                 </div>
                             </div>
+                            <!-- custom html end here -->
                         </div>
-                        <!-- custom html end here -->
-                    </div>
-                    <!-- / Content -->
+                        <!-- / Content -->
 
-                    <!-- Footer -->
-                    <footer class="content-footer footer bg-footer-theme">
-                        <div
-                            class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                            <div class="mb-2 mb-md-0">
-                                ©
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script>
-                                , made with ❤️ by
-                                <a href="https://ussbd.com" target="_blank" class="footer-link fw-medium">Unicorn
-                                    Software and Solutions LTD</a>
+                        <!-- Footer -->
+                        <footer class="content-footer footer bg-footer-theme">
+                            <div
+                                class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                                <div class="mb-2 mb-md-0">
+                                    ©
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                    , made with ❤️ by
+                                    <a href="https://ussbd.com" target="_blank" class="footer-link fw-medium">Unicorn
+                                        Software and Solutions LTD</a>
+                                </div>
                             </div>
-                        </div>
-                    </footer>
-                    <!-- / Footer -->
+                        </footer>
+                        <!-- / Footer -->
 
-                    <div class="content-backdrop fade"></div>
+                        <div class="content-backdrop fade"></div>
+                    </div>
+                    <!-- Content wrapper -->
                 </div>
-                <!-- Content wrapper -->
+                <!-- / Layout page -->
             </div>
-            <!-- / Layout page -->
+
+            <!-- Overlay -->
+            <div class="layout-overlay layout-menu-toggle"></div>
         </div>
+        <!-- / Layout wrapper -->
 
-        <!-- Overlay -->
-        <div class="layout-overlay layout-menu-toggle"></div>
-    </div>
-    <!-- / Layout wrapper -->
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+        <!-- rich text box js -->
+        <script>
+            CKEDITOR.replace('outcome_details');
+        </script>
+        <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+        <script src="../assets/vendor/libs/popper/popper.js"></script>
+        <script src="../assets/vendor/js/bootstrap.js"></script>
+        <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="../assets/vendor/js/menu.js"></script>
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <!-- rich text box js -->
-    <script>
-        CKEDITOR.replace('poe_details');
-    </script>
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="../assets/vendor/js/menu.js"></script>
+        <!-- endbuild -->
 
-    <!-- endbuild -->
+        <!-- Vendors JS -->
+        <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
 
-    <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+        <!-- Main JS -->
+        <script src="../assets/js/main.js"></script>
 
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
+        <!-- Page JS -->
+        <script src="../assets/js/dashboards-analytics.js"></script>
 
-    <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 
 </html>

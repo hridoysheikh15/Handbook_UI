@@ -191,3 +191,13 @@ function add_more_3() {
   $(append_box).append(`<li><div class='d-flex justify-content-between'><h5>New Item</h5><button class='btn btn-sm btn-danger' onclick='remove_box(event)'>Remove</button></div>${add_element}${textbox_script}</li>`);
 
 }
+
+
+// multiple selection js
+$(document).ready(function() {
+
+  $('.basic-multiple').select2({
+    width: 'resolve'
+  });
+
+});
