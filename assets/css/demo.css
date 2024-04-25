@@ -828,10 +828,32 @@
 
 .section-head {
   position: relative;
-  padding: 5px 15px;
+  padding: 5px 30px;
 }
 
 .section-head::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: .8rem;
+  height: .8rem;
+  border: 2px solid #4e50d4;
+  top: .25rem;
+  left: 0;
+}
+
+.section-head::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: .8rem;
+  height: .8rem;
+  border: 2px solid #696cff;
+  top: .65rem;
+  left: .4rem;
+}
+
+/* .section-head::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -841,7 +863,7 @@
   bottom: 0;
   left: 0;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 /* Program Add page end */
 
